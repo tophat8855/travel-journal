@@ -1,0 +1,22 @@
+<div class="ui grid">
+  Photo list page
+  <div class="eight wide column">
+    <div>
+      <ul>
+        {{#each photo in model}}
+        <li>
+          {{photo.name}}
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+
+    {{#link-to "photos.new"}}
+      Add new photo
+    {{/link-to}}
+  </div>
+
+  <div class="eight wide column">
+    {{outlet}}
+  </div>
+</div>
