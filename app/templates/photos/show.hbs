@@ -1,0 +1,8 @@
+<div class="ui image">
+  <a class="ui right red corner label" {{action 'deletePhoto' this}}>
+    <i class="remove circle icon"></i>
+  </a>
+  <img {{bind-attr src=model.image}} alt="" width=800 />
+  <h3>{{model.name}}</h3>
+    {{model.description}}
+</div>

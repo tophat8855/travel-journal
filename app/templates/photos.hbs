@@ -1,22 +1,15 @@
-<div class="ui grid">
-  Photo list page
-  <div class="eight wide column">
-    <div>
-      <ul>
-        {{#each photo in model}}
-        <li>
-          {{photo.name}}
-        </li>
-        {{/each}}
-      </ul>
-    </div>
-
-    {{#link-to "photos.new"}}
-      Add new photo
-    {{/link-to}}
-  </div>
-
-  <div class="eight wide column">
+  <div class="ui centered grid">
     {{outlet}}
   </div>
-</div>
+
+  <div class="ui page grid">
+    {{#each photo in model}}
+    <div class = "four wide column">
+      {{#link-to "photos.show" photo}}
+      <img class="ui medium circular image" {{bind-attr src=photo.image}} alt="" width=200 />
+
+      {{/link-to}}
+
+    </div>
+    {{/each}}
+  </div>

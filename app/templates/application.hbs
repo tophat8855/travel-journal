@@ -1,6 +1,13 @@
-<h2 id="title">Welcome to your Travel Photo Journal</h2>
+<h2 id="title">
+  Welcome to your Travel Photo Journal
 
-{{#link-to "photos"}}
-  See Photo List
-{{/link-to}}
+  {{#link-to "photos"}}
+  <i class="grid layout icon"></i>
+  {{/link-to}}
+
+  {{#link-to "photos.new"}}
+  <i class="add circle icon"></i>
+  {{/link-to}}
+</h2>
+
 {{outlet}}
