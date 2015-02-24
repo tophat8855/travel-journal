@@ -35,7 +35,6 @@ test('creating a photo', function(assert) {
     var listPhotos = findWithAssert('.image');
     click(listPhotos.last());
 
-
     andThen(function() {
       var image = $("#show");
       assert.notEqual(image[0].currentSrc.indexOf('http://media.digitalcameraworld.com/wp-content/uploads/sites/123/2012/05/Landscape_photography_tips.foamy_3.jpg'), -1);
